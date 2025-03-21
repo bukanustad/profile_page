@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABDUR ROZAQ | PROFILE PAGE</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .editor {
+            width: 90%;
+            max-width: 900px;
+            background: #252526;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 255, 0, 0.5);
+            overflow: hidden;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        .editor:hover {
+            box-shadow: 0px 6px 20px rgba(0, 255, 0, 0.8);
+        }
+        .editor-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #333;
+            padding: 5px 10px;
+            position: relative;
+        }
+        .editor-header .left {
+            display: flex;
+            align-items: center;
+        }
+        .editor-header div {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        .red { background: #ff5f56; }
+        .yellow { background: #ffbd2e; }
+        .green { background: #27c93f; }
+        .editor-header .right {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #d4d4d4;
+            font-size: 14px;
+            cursor: pointer;
+            transition: color 0.3s ease-in-out;
+        }
+        .editor-header .right:hover {
+            color: #27c93f;
+        }
+        .editor-content {
+            padding: 10px 20px;
+            white-space: pre-line;
+            font-size: 14px;
+            line-height: 1.2;
+        }
+        .highlight {
+            color: #569cd6;
+        }
+        .string {
+            color: #ce9178;
+        }
+        .name {
+            font-weight: bold;
+            color: #27c93f;
+            animation: glow 1.5s infinite alternate;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 5px #27c93f; }
+            to { text-shadow: 0 0 15px #27c93f; }
+        }
+        .typing {
+            display: inline-block;
+            border-right: 2px solid #ce9178;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 4s steps(60, end) infinite alternate, blink 0.8s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink {
+            from, to { border-color: transparent; }
+            50% { border-color: #ce9178; }
+        }
+    </style>
+</head>
+<body>
+    <div class="editor">
+        <div class="editor-header">
+            <div class="left">
+                <div class="red"></div>
+                <div class="yellow"></div>
+                <div class="green"></div>
+            </div>
+        </div>
+        <div class="editor-content">
+            <span class="highlight">const</span> <span class="string">name</span> = "<span class="name">ABDUR ROZAQ</span>";
+            <br>
+            <span class="highlight">const</span> <span class="string">Bio</span> = "<span class="highlight">Don't Disturb my <b style="color: #27c93f;
+            animation: glow 1.5s infinite alternate;">NYIA</b></span>";
+            <br>
+            <span class="highlight">const</span> <span class="string">skills</span> = ["JavaScript", "HTML", "Bootstrap", "CSS", "Python", "MongoDB", "Docker", "GraphQL", "TypeScript"];
+            <br>
+            <span class="highlight">const</span> <span class="string">socials</span> = {
+                GitHub: "<a href='https://github.com/bukanustad' target='_blank' class='string'>https://github.com/bukanustad</a>",
+                Instagram: "<a href='https://instagram.com/abdurrozaq.bws' target='_blank' class='string'>https://instagram.com/abdurrozaq.bws</a>",
+                TikTok: "<a href='https://www.tiktok.com/@reply.m3' target='_blank' class='string'>https://www.tiktok.com/@reply.m3</a>",
+             };
+            <br>
+            <span class="highlight">const</span> <span class="string">aboutMe</span> = "Every line of code is a small step towards a solution. Every mistake is a valuable lesson. Don't let difficulties stop you, because behind every challenge, there is an opportunity to grow and develop.!";
+            <br>
+            <span class="highlight">const</span> <span class="string">projects</span> = [
+                { name: "Portfolio Website", description: "A personal website showcasing my skills and projects." },
+                { name: "E-Commerce App", description: "An online store built with MERN stack." },
+                { name: "Chat Application", description: "A real-time chat app using WebSockets and Node.js." }
+            ];
+            <br>
+            <span class="highlight">console.log</span>(<span class="string typing">"Welcome to my portfolio! Explore my work and connect with me on social media."</span>);
+        </div>
+    </div>
+</body>
+</html>
